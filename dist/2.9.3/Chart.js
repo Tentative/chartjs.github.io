@@ -15520,6 +15520,9 @@ var Legend = core_element.extend({
 
 				// Draw pointStyle as legend symbol
 				helpers$1.canvas.drawPoint(ctx, legendItem.pointStyle, radius, centerX, centerY, legendItem.rotation);
+			} 
+			else if (opts.labels && opts.labels.useLineStyle) {
+				ctx.strokeRect(x, y + fontSize / 2, boxWidth, 0);
 			} else {
 				// Draw box as legend symbol
 				ctx.fillRect(rtlHelper.leftForLtr(x, boxWidth), y, boxWidth, fontSize);
